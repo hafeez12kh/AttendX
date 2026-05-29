@@ -1,0 +1,45 @@
+Step 1️ Open Command Prompt
+
+Press Win + R → type cmd → Enter
+
+Step 2️ Start MySQL shell
+mysql -u root -p
+
+
+Enter your MySQL root password.
+
+You should see:
+
+mysql>
+
+Step 3️ Paste the commands (THIS is where)
+
+Now paste exactly this:
+
+CREATE DATABASE attendance_db
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_unicode_ci;
+
+CREATE USER 'attendance_user'@'localhost'
+IDENTIFIED BY 'Sendash1#S';
+
+GRANT ALL PRIVILEGES ON attendance_db.*
+TO 'attendance_user'@'localhost';
+
+FLUSH PRIVILEGES;
+
+
+Then type:
+
+EXIT;
+
+
+Change password
+
+ALTER USER 'attendance_user'@'localhost'
+IDENTIFIED BY 'Sendash1#S';
+
+GRANT ALL PRIVILEGES ON attendance_db.*
+TO 'attendance_user'@'localhost';
+
+FLUSH PRIVILEGES;
